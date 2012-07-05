@@ -121,7 +121,7 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 colorscheme desert
 set background=dark
@@ -134,7 +134,7 @@ if has("gui_running")
     set guitablabel=%M\ %t
 
     "FD Maximize window
-	set guiheadroom=0
+    set guiheadroom=0
     set lines=999 columns=999
 endif
 
@@ -211,7 +211,7 @@ map <leader>ba :1,1000 bd!<cr>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
+map <leader>tm :tabmove
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -220,7 +220,7 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -401,11 +401,9 @@ endfunction
 set browsedir=buffer
 set noautochdir " Do not change directory, this breaks ctags
 map <C-b> :make -j4<cr>
-map o :bn<cr>
-map O :bp<cr>
-map t gt
-map T gT
-map <leader><tab> :b#<cr>
+map Q :bn<cr>
+map T gt
+map <S-F2> :!ctags -R .<cr>
 map <C-s> :w<cr>
 map <F2> <C-]>
 map <F1> :TlistOpen<cr>
