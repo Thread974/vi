@@ -1,3 +1,7 @@
+""
+"" My vi configuration
+""
+
 set history=500
 filetype plugin on
 filetype indent on
@@ -59,17 +63,21 @@ set nobackup
 set nowb
 set noswapfile
 
+" Indenting done manually
+set autoindent  " Indent new line same as previous but with TABS
+set smartindent " Insert indent after a line ending with {
 set noexpandtab
-set smarttab
+set nosmarttab
 set shiftwidth=8
 set tabstop=8
-set lbr
-set tw=500
-set noai "Auto indent
-set nosi "Smart indent
-set wrap "Wrap lines
+map <silent> <leader><tab> :s/\t/        /g<cr>
 
+" Wrap text after 500 cols in most cases
+set nolinebreak
+set textwidth=500
+set wrap
 
+" Usuful shorcut
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Return to last edit position when opening files (You want this!)
