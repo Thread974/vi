@@ -79,6 +79,7 @@ set wrap
 
 " Usuful shorcut
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+map <leader>e :edit <c-r>=expand("%:p:h")<cr>/
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
