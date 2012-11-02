@@ -70,7 +70,7 @@ set noexpandtab
 set nosmarttab
 set shiftwidth=8
 set tabstop=8
-map <silent> <leader><tab> :s/\t/        /g<cr>
+map <silent> <leader><tab> :%s/\t/        /g<cr>
 
 " Wrap text after 500 cols in most cases
 set nolinebreak
