@@ -96,6 +96,8 @@ map <leader>cc :botright cope<cr>
 map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
+map <F6> :cn<cr>
+map <S-F6> :cp<cr>
 
 """"""""""""""""""""""""""""""""
 """" FD utility for plugins """"
