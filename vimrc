@@ -119,7 +119,9 @@ set mouse=a
 set browsedir=buffer
 set noautochdir " Do not change directory, this breaks ctags
 map <C-s> :w<cr>
-map <C-b> :make -j4<cr>
+map <C-b> :w<cr>:make -j4<cr><cr>:botright cope<cr>
+map s :w<cr>:make -j4<cr><cr>:botright cope<cr>
+map K i<cr><Esc>
 map Q :bp<cr>
 map m :bn<cr>
 map T gt
